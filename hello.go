@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math"
+	"time"
 )
 
 // Constants ===============
@@ -76,5 +77,44 @@ func main() {
 	}
 
 	// If/Else ===============
+	if 7%2 == 0 {
+		fmt.Println("7 is even")
+	} else {
+		fmt.Println("7 is odd")
+	}
 
+	if 8%4 == 0 {
+		fmt.Println("8 is divisible by 4")
+	}
+
+	if 8%4 == 0 || 7%2 == 0 {
+		fmt.Println("either 8 or 7 are even")
+	}
+
+	if num := 9; num < 0 {
+		fmt.Println("is negative")
+	} else if num < 10 {
+		fmt.Println("has 1 digit")
+	} else {
+		fmt.Println(num, " has multiple digits")
+	}
+
+	// Switch
+	o := 2
+	fmt.Print("Write ", o, " as ")
+	switch i {
+	case 1:
+		fmt.Println("one")
+	case 2:
+		fmt.Println("two")
+	case 3:
+		fmt.Println("three")
+	}
+
+	switch time.Now().Weekday() {
+	case time.Saturday, time.Sunday:
+		fmt.Println("I'ts the weekend")
+	default:
+		fmt.Println("I'ts a weekday")
+	}
 }
