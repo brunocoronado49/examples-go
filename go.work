@@ -7,4 +7,5 @@ use (
 	./ifelse
 	./switchst
 	./arrays
+	./slicesdata
 )
